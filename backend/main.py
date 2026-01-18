@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 
-app = FastAPI()
+app = FastAPI(
+  title = "Mindly"
+)
 
 @app.get("/")
 def hello_server():

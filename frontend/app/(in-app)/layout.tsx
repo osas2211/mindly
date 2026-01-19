@@ -7,11 +7,11 @@ const InAppLayout = ({
   children: React.ReactNode
 }>) => {
   return (
-    <div className="bg-linear-to-r from-soft-periwinkle to-white min-h-screen flex gap-5 md:gap-10">
+    <div className="bg-linear-to-r from-soft-periwinkle to-cloud-white min-h-screen flex">
       <div className="">
         <NavMenu />
       </div>
-      <div className="">{children}</div>
+      <div className="p-4 md:p-8">{children}</div>
     </div>
   )
 }

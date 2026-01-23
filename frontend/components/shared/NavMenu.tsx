@@ -4,8 +4,9 @@ import { nav_routes } from "@/utils/routes"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { CgChevronLeft, CgChevronRight } from "react-icons/cg"
-import { BiLogOut } from "react-icons/bi"
+import { BiBell, BiLogOut } from "react-icons/bi"
 import { RxHamburgerMenu } from "react-icons/rx"
+import { Avatar, IconButton } from "./ui"
 
 export const NavMenu = () => {
   const pathname = usePathname()
@@ -96,12 +97,20 @@ export const NavMenu = () => {
 
       {/* Mobile Menu */}
       <div className="md:hidden">
-        <button
-          className="p-3 bg-soft-periwinkle rounded-xl cursor-pointer"
-          onClick={toggleMobileMenu}
-        >
-          <RxHamburgerMenu size={26} />
-        </button>
+        <div className="flex items-center gap-4 justify-between">
+          <button
+            className="p-3 bg-soft-periwinkle rounded-xl cursor-pointer"
+            onClick={toggleMobileMenu}
+          >
+            <RxHamburgerMenu size={26} />
+          </button>
+          <div className="flex gap-4 items-center">
+            <IconButton variant="outline" className="border-grey-400! border!">
+              <BiBell />
+            </IconButton>
+            <Avatar src="https://i.pravatar.cc/150?img=1" alt="User 1" />
+          </div>
+        </div>
         <div
           className={`absolute top-0 left-0 h-screen bg-cloud-white shadow-lg transition-transform duration-500 ease-in-out ${
             mobileMenuOpen ? "translate-x-0" : "-translate-x-full"

@@ -1,14 +1,20 @@
+"use client"
 import React from "react"
+import { WelcomeCards } from "@/components/dashboard/WelcomeCards"
+import { UpcomingSessions } from "@/components/dashboard/UpcomingSessions"
+import { Recommendations } from "@/components/dashboard/Recommendations"
 
 const DashboardPage = () => {
   return (
-    <div>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam molestiae
-        reprehenderit dignissimos earum commodi alias culpa architecto incidunt
-        doloremque quod cumque, eveniet maxime illum ipsam consectetur vitae
-        vero voluptatum eos.
-      </p>
+    <div className="space-y-8">
+      {/* Welcome Cards Section */}
+      <WelcomeCards />
+
+      {/* Upcoming Sessions Section */}
+      <UpcomingSessions />
+
+      {/* Recommendations Section */}
+      <Recommendations />
     </div>
   )
 }

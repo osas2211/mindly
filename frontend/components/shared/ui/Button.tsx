@@ -23,7 +23,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       default:
         "bg-mindly-purple text-white hover:bg-mindly-purple/90 active:bg-mindly-purple/80",
       outline:
-        "bg-transparent text-mindly-purple border-2 border-mindly-purple hover:bg-mindly-purple/10 active:bg-mindly-purple/20",
+        "bg-transparent text-mindly-purple border-1 border-mindly-purple hover:bg-mindly-purple/10 active:bg-mindly-purple/20",
       text: "bg-transparent text-mindly-purple hover:bg-mindly-purple/10 active:bg-mindly-purple/20",
       danger: "bg-red-500 text-white hover:bg-red-600 active:bg-red-700",
     }

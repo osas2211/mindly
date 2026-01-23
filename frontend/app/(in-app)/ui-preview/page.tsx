@@ -6,7 +6,7 @@ import { Input } from "@/components/shared/ui/Input"
 import { Textarea } from "@/components/shared/ui/Textarea"
 import { Select } from "@/components/shared/ui/Select"
 import { Checkbox } from "@/components/shared/ui/Checkbox"
-import { Radio, Toggle, Modal, Card, Avatar, Badge, IconButton, Spinner } from "@/components/shared/ui"
+import { Radio, Toggle, Modal, Card, Avatar, Badge, IconButton, Spinner, Tooltip } from "@/components/shared/ui"
 import { BiHeart, BiEdit, BiTrash, BiPlus, BiSearch, BiShare } from "react-icons/bi"
 
 export default function UIPreviewPage() {
@@ -999,6 +999,160 @@ export default function UIPreviewPage() {
                       </div>
                     </div>
                   </Card>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Tooltip Component */}
+        <section className="space-y-6">
+          <h2 className="text-2xl font-bold text-black mb-4">Tooltip</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold text-black mb-3">
+                Positions
+              </h3>
+              <div className="flex flex-wrap items-center justify-center gap-12 p-12">
+                <Tooltip content="Tooltip on top" position="top">
+                  <Button>Top</Button>
+                </Tooltip>
+                <Tooltip content="Tooltip on bottom" position="bottom">
+                  <Button>Bottom</Button>
+                </Tooltip>
+                <Tooltip content="Tooltip on left" position="left">
+                  <Button>Left</Button>
+                </Tooltip>
+                <Tooltip content="Tooltip on right" position="right">
+                  <Button>Right</Button>
+                </Tooltip>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-black mb-3">
+                Use Cases
+              </h3>
+              <div className="space-y-4">
+                <div>
+                  <p className="text-sm text-grey-500 mb-2">On Buttons</p>
+                  <div className="flex gap-3">
+                    <Tooltip content="Save your changes">
+                      <Button>Save</Button>
+                    </Tooltip>
+                    <Tooltip content="Delete this item permanently">
+                      <Button variant="danger">Delete</Button>
+                    </Tooltip>
+                    <Tooltip content="This action is disabled">
+                      <Button disabled>Disabled</Button>
+                    </Tooltip>
+                  </div>
+                </div>
+
+                <div>
+                  <p className="text-sm text-grey-500 mb-2">On Icon Buttons</p>
+                  <div className="flex gap-2">
+                    <Tooltip content="Edit">
+                      <IconButton variant="outline">
+                        <BiEdit />
+                      </IconButton>
+                    </Tooltip>
+                    <Tooltip content="Delete">
+                      <IconButton variant="danger">
+                        <BiTrash />
+                      </IconButton>
+                    </Tooltip>
+                    <Tooltip content="Share">
+                      <IconButton variant="text">
+                        <BiShare />
+                      </IconButton>
+                    </Tooltip>
+                    <Tooltip content="Search">
+                      <IconButton>
+                        <BiSearch />
+                      </IconButton>
+                    </Tooltip>
+                  </div>
+                </div>
+
+                <div>
+                  <p className="text-sm text-grey-500 mb-2">On Text</p>
+                  <p className="text-black">
+                    Hover over{" "}
+                    <Tooltip content="This is additional information">
+                      <span className="text-mindly-purple cursor-help border-b border-dashed border-mindly-purple">
+                        this text
+                      </span>
+                    </Tooltip>{" "}
+                    to see a tooltip.
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-sm text-grey-500 mb-2">On Badges</p>
+                  <div className="flex gap-2">
+                    <Tooltip content="Active users currently online">
+                      <Badge variant="success" dot>
+                        24 Active
+                      </Badge>
+                    </Tooltip>
+                    <Tooltip content="Issues requiring attention">
+                      <Badge variant="danger">5 Errors</Badge>
+                    </Tooltip>
+                  </div>
+                </div>
+
+                <div>
+                  <p className="text-sm text-grey-500 mb-2">On Avatars</p>
+                  <div className="flex -space-x-2">
+                    <Tooltip content="John Doe">
+                      <Avatar
+                        src="https://i.pravatar.cc/150?img=16"
+                        alt="John Doe"
+                        showBorder
+                      />
+                    </Tooltip>
+                    <Tooltip content="Jane Smith">
+                      <Avatar
+                        src="https://i.pravatar.cc/150?img=17"
+                        alt="Jane Smith"
+                        showBorder
+                      />
+                    </Tooltip>
+                    <Tooltip content="Mike Johnson">
+                      <Avatar
+                        src="https://i.pravatar.cc/150?img=18"
+                        alt="Mike Johnson"
+                        showBorder
+                      />
+                    </Tooltip>
+                    <Tooltip content="5 more team members">
+                      <Avatar initials="+5" showBorder />
+                    </Tooltip>
+                  </div>
+                </div>
+
+                <div>
+                  <p className="text-sm text-grey-500 mb-2">
+                    Complex Tooltip Content
+                  </p>
+                  <Tooltip
+                    content={
+                      <div className="space-y-1">
+                        <p className="font-semibold">John Doe</p>
+                        <p className="text-xs opacity-90">
+                          Software Engineer
+                        </p>
+                        <p className="text-xs opacity-90">john@example.com</p>
+                      </div>
+                    }
+                  >
+                    <Avatar
+                      src="https://i.pravatar.cc/150?img=19"
+                      alt="John Doe"
+                      size="lg"
+                    />
+                  </Tooltip>
                 </div>
               </div>
             </div>

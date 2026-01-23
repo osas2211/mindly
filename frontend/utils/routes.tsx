@@ -32,8 +32,8 @@ export const nav_routes: { main: nav_routeT[]; sub: nav_routeT[] } = {
       icon: <TbUsersGroup />,
     },
     {
-      name: "Calender",
-      path: "/calender",
+      name: "Calendar",
+      path: "/calendar",
       icon: <SlCalender />,
     },
     {

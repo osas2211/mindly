@@ -11,7 +11,9 @@ const InAppLayout = ({
       <div className="">
         <NavMenu />
       </div>
-      <div className="p-4 md:p-8 md:py-8 py-0">{children}</div>
+      <div className="p-4 md:p-8 md:py-8 py-0 max-h-screen overflow-y-scroll w-full">
+        {children}
+      </div>
     </div>
   )
 }
